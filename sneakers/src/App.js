@@ -1,8 +1,8 @@
 
 function App() {
   return (
-    <div className="App">
-      goooo
+    <div className="wrapper">
+      gooo
     </div>
   );
 }
