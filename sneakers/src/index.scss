@@ -15,6 +15,12 @@ body {
   min-width: 1080px;
   margin: 50px auto;
 }
+.drawer {
+  position: absolute;
+  width: 385px;
+  background: #ffffff;
+  box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.04);
+}
 header {
   display: flex;
   justify-content: space-between;
@@ -45,7 +51,8 @@ header {
 }
 .shooses {
   display: flex;
-  text-align: center;
+  justify-content: center;
+
 }
 .card {
   border: 1px solid #f8e8f8;
