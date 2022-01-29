@@ -5,6 +5,16 @@ function App() {
      
      <div className="overlay">
       <div className="drawer">
+         <h2>corsina</h2>
+
+        <div className="cartItem">
+            <img width={70} height={70} src="/img/sneakers/1.jpg"/>
+            <div>
+              <p>mens shoose</p>
+              <b>999 uah</b>
+            </div>
+            <button>0</button>
+        </div>
 
       </div>
     </div>
