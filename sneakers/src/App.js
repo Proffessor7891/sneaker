@@ -2,6 +2,12 @@ import Card from "./components/Card";
 import Drawer from "./components/Drawer";
 import Header from "./components/Header";
 
+
+const arr = [ 
+  {name: 'krytie tyfela', price: 560 }, 
+  {name: 'krytie tyfela', price: 560 }, 
+  {name: 'krytie tyfela', price: 560 }
+]
 function App() {
   return (
     <div className="wrapper">
@@ -16,11 +22,15 @@ function App() {
          
         <div className="shooses">
           
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
           
+          {arr.map((obj) => (
+            <Card
+            title="mens blackv shoes"
+            price={555}
+            imageUrl="/img/zara.png"
+          />
+          ))}
+            
         </div>      
 
 
