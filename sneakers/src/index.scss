@@ -25,6 +25,7 @@ body {
   z-index: 1;
 }
 .drawer {
+  
   position: absolute;
   padding: 30px;
   width: 385px;
@@ -36,6 +37,15 @@ body {
   h2 {
     margin: 0;
     font-size: 24px;
+  }
+  li {
+    display: flex;
+    justify-content: space-between;
+  }
+  .items {
+    height: 80%;
+    overflow: auto;
+    background-color: royalblue;
   }
   .cartItem {
     display: flex;
