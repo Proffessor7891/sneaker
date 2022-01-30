@@ -23,6 +23,7 @@ body {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
+  display: none;
 }
 .drawer {
   
@@ -45,7 +46,7 @@ body {
   .items {
     height: 80%;
     overflow: auto;
-    background-color: royalblue;
+    
   }
   .cartItem {
     display: flex;
