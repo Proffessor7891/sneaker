@@ -12,7 +12,7 @@ const Card = (props) => {
           <div className="cardBottom">
             <div className="cardPrice">
               <span>price</span>
-              <b>{props.price}uah</b>
+              <b>{props.price}ua</b>
             </div>
             <button onClick={onClickButton}>
                 <img width={11} height={11} src="/img/zara1.png" />
