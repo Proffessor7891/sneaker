@@ -7,7 +7,7 @@ const Card = (props) => {
 
   return <div>
       <div className="card">
-          <div>
+          <div onClick={props.onClickLike}>
             <img  width={10} height={10} src="/img/zara1.png" />
           </div>
           <img width={133} height={112} src={props.imageUrl}/>
@@ -17,7 +17,7 @@ const Card = (props) => {
               <span>price</span>
               <b>{props.price}uah</b>
             </div>
-            <button onClick={onClickButton}>
+            <button onClick={props.onClickPlus}>
                 <img width={11} height={11} src="/img/zara1.png" />
             </button>
           </div>

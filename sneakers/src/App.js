@@ -29,6 +29,8 @@ function App() {
             title={obj.title}
             price={obj.price}
             imageUrl={obj.imageUrl}
+            onClickLike={() => console.log("like")}
+            onClickPlus={() => console.log("plus")}
           />
           ))}
             
