@@ -1,14 +1,17 @@
 import React from 'react';
 
 const Card = (props) => {
-   const onClickButton = () => {
-    alert(props.imageUrl)
+
+  const [ isAdded, setIsAdded ] = React.useState(false)
+
+   const onClickPlus = () => {
+    setIsAdded(!isAdded)
    }
 
   return <div>
       <div className="card">
-          <div onClick={props.onClickLike}>
-            <img  width={10} height={10} src="/img/zara1.png" />
+          <div >
+            <img onClick={props.onClickLike} width={10} height={10} src="/img/zara1.png" />
           </div>
           <img width={133} height={112} src={props.imageUrl}/>
           <p>{props.title}</p>
@@ -17,9 +20,9 @@ const Card = (props) => {
               <span>price</span>
               <b>{props.price}uah</b>
             </div>
-            <button onClick={props.onClickPlus}>
-                <img width={11} height={11} src="/img/zara1.png" />
-            </button>
+            <div>
+                <img onClick={onClickPlus} width={11} height={11} src={ isAdded ? "/img/1.png" : "/img/zara1.png"} />
+            </div>
           </div>
         </div> 
   </div>;

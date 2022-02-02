@@ -6,7 +6,8 @@ import Header from "./components/Header";
 const arr = [ 
   {title: 'krytie tyfela', price: 560, imageUrl: "/img/sneakers/2.jpg" }, 
   {title: 'nekrytie tyfela', price: 60, imageUrl: "/img/sneakers/3.jpg" }, 
-  {title: 'krytie sapogi', price: 5770, imageUrl: "/img/sneakers/4.jpg" }
+  {title: 'krytie sapogi', price: 5770, imageUrl: "/img/sneakers/4.jpg" },
+  {title: 'modnie tyfli', price: 320, imageUrl: "/img/sneakers/2.jpg" }, 
 ]
 function App() {
   return (
