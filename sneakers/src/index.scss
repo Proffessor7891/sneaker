@@ -79,11 +79,12 @@ header {
   }
 }
 .content {
+  
   padding: 40px; 
 }
 .shooses {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
 
 }
 .card {
