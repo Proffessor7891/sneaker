@@ -7,49 +7,9 @@ import Header from "./components/Header";
 
 function App() {
   const [cartOpened, setCartOpened] = React.useState(false);
+  const[products, setProducts] = React.useState([])
 
-  const[products, setProducts] = React.useState([
-    {
-     "title": "krytie tyfela",
-     "price": "120",
-     "imageUrl": "/img/sneakers/2.jpg"
-    },
-    {
-     "title": "tyfela",
-     "price": "250",
-     "imageUrl": "/img/sneakers/3.jpg"
-    },
-    {
-     "title": "krytie ",
-     "price": "820",
-     "imageUrl": "/img/sneakers/4.jpg"
-    },
-    {
-     "title": "nekrytie tyfela",
-     "price": "330",
-     "imageUrl": "/img/sneakers/2.jpg"
-    },
-    {
-     "title": "krytie tyfela",
-     "price": "120",
-     "imageUrl": "/img/sneakers/2.jpg"
-    },
-    {
-     "title": "tyfela",
-     "price": "250",
-     "imageUrl": "/img/sneakers/3.jpg"
-    },
-    {
-     "title": "krytie ",
-     "price": "820",
-     "imageUrl": "/img/sneakers/4.jpg"
-    },
-    {
-     "title": "nekrytie tyfela",
-     "price": "330",
-     "imageUrl": "/img/sneakers/2.jpg"
-    }
-   ])
+  fetch('https://61fa3f3b31f9c200175966fa.mockapi.io/:endpoint')
 
 
   return (
