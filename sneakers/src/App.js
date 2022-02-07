@@ -9,7 +9,7 @@ function App() {
   const [cartOpened, setCartOpened] = React.useState(false);
   const[products, setProducts] = React.useState([])
 
-  fetch('https://61fa3f3b31f9c200175966fa.mockapi.io/:endpoint')
+  fetch('https://61fa3f3b31f9c200175966fa.mockapi.io/products')
 
 
   return (
