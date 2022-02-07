@@ -6,6 +6,8 @@ import Header from "./components/Header";
 
 
 function App() {
+  const [cartOpened, setCartOpened] = React.useState(false);
+
   const[products, setProducts] = React.useState([
     {
      "title": "krytie tyfela",
@@ -52,12 +54,8 @@ function App() {
 
   return (
     <div className="wrapper">
-     
-     <div className="overlay">
-      <Drawer/>
-    </div>
-
-      <Header/>
+      {cartOpened && <Drawer onClose={() => setCartOpened(false)} /> }
+      <Header onClickCart={() => setCartOpened(true)}  />
       <div className="content">
          <h1>all shooes</h1>
          <input placeholder="search..."/>
