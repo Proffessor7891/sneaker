@@ -1,20 +1,26 @@
 import React from 'react';
 
-const Drawer = (props) => {
+const Drawer = ({onClose, products = [] }) => {
   return <div>
       <div className="drawer">
          <h2>corsina</h2>
-         <button onClick={props.onClose}>c</button>
+         <button onClick={onClose}>c</button>
       <div className="items">
 
+        {products.map((obj) => (
+          
         <div className="cartItem">
-            <img width={70} height={70} src="/img/sneakers/1.jpg"/>
-            <div>
-              <p>mens shoose</p>
-              <b>999 uah</b>
-            </div>     
-            <button>0</button>
+        <div style={{ backgroundImage: `url(${obj.imageUrl})`}}
+        className='cartItemImg'>
+
         </div>
+        <div>
+          <p>mens shoose</p>
+          <b>999 uah</b>
+        </div>     
+        <button>0</button>
+    </div>
+        ))}
         
       </div>
         <ul>
