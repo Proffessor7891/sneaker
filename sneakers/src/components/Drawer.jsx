@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Drawer = () => {
+const Drawer = (props) => {
   return <div>
       <div className="drawer">
          <h2>corsina</h2>
-         <button>c</button>
+         <button onClick={props.onClose}>c</button>
       <div className="items">
 
         <div className="cartItem">
