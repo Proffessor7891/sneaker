@@ -7,9 +7,18 @@ import Header from "./components/Header";
 
 function App() {
   const [cartOpened, setCartOpened] = React.useState(false);
-  const[products, setProducts] = React.useState([])
+  const [products, setProducts] = React.useState([])
+  const [cartProducts, setCartProducts] = React.useState([])
 
+  React.useEffect(() => {
   fetch('https://61fa3f3b31f9c200175966fa.mockapi.io/products')
+    .then((Response) => {
+    return Response.json()
+    })
+    .then((json) => {
+      setProducts(json);
+    })
+  }, [])
 
 
   return (
