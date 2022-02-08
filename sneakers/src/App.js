@@ -10,18 +10,7 @@ function App() {
 
   const [cartOpened, setCartOpened] = React.useState(false);
   const [products, setProducts] = React.useState([])
-  const [cartProducts, setCartProducts] = React.useState([
-    {
-      "title": "krytie tyfela",
-      "price": "120",
-      "imageUrl": "/img/sneakers/2.jpg"
-     },
-     {
-      "title": "tyfela",
-      "price": "250",
-      "imageUrl": "/img/sneakers/3.jpg"
-     },
-  ])
+  const [cartProducts, setCartProducts] = React.useState([])
 
   React.useEffect(() => {
   fetch('https://61fa3f3b31f9c200175966fa.mockapi.io/products')
@@ -51,7 +40,7 @@ function App() {
             price={obj.price}
             imageUrl={obj.imageUrl}
             onClickLike={() => console.log("like")}
-            onClickPlus={() => console.log("plus")}
+            onPlus={() => console.log("plus")}
           />
           ))}
             
