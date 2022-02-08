@@ -15,8 +15,8 @@ const Drawer = ({onClose, products = [] }) => {
 
         </div>
         <div>
-          <p>mens shoose</p>
-          <b>999 uah</b>
+          <p>{obj.title}</p>
+          <b>{obj.price}</b>
         </div>     
         <button>0</button>
     </div>
