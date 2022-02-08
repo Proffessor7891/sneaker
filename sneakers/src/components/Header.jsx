@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Header = () => {
+const Header = (props) => {
   return <div>
       <header>
         <div className="header-left">
@@ -13,9 +13,9 @@ const Header = () => {
 
         <div className="header-right">
         <ul>
-          <li>
+          <li onClick={props.onClickCart}>
           <img width={18} height={18} src="/img/zara1.png" />
-            <span>1205 uah</span>
+            <span className='prices' >1205 uah</span>
           </li>
           <li>
           <img width={18} height={18} src="/img/zara1.png" />
