@@ -10,6 +10,7 @@ function App() {
 
   const [cartOpened, setCartOpened] = React.useState(false);
   const [products, setProducts] = React.useState([])
+  const [searchValue, setSearchValue] = React.useState('')
   const [cartProducts, setCartProducts] = React.useState([])
 
   React.useEffect(() => {
@@ -22,25 +23,39 @@ function App() {
     })
   }, [])
 
+  const addingToCart = (product) => {
+   setCartProducts(prev => [...prev, product ]);
+  };
+
+  const onChangeSearchInput = (event) => {
+    setSearchValue(event.target.value)
+  }
+
 
   return (
     <div className="wrapper">
       {cartOpened && <Drawer products={cartProducts} onClose={() => setCartOpened(false)} /> }
       <Header onClickCart={() => setCartOpened(true)}  />
       <div className="content">
-         <h1>all shooes</h1>
-         <input placeholder="search..."/>
-         
+         <h1>{searchValue ? `finding: "${searchValue}"` : 'all'}</h1>
+         <div className="searchBlock">
+         <input onChange={onChangeSearchInput} value={searchValue} placeholder="search..."/>
+         {searchValue && (<img
+         onClick={() => setSearchValue('')}
+          width={10} height={10} 
+          src="/img/zara.png"/>)}
+         </div>
         <div className="shooses">
           
           
-          {products.map((obj) => (
+          {products.filter(product => product.title.toLowerCase().includes(searchValue.toLowerCase())).map((obj, index) => (
             <Card
+            key={index}
             title={obj.title}
             price={obj.price}
             imageUrl={obj.imageUrl}
             onClickLike={() => console.log("like")}
-            onPlus={() => console.log("plus")}
+            onPlus={(product) => addingToCart(product)}
           />
           ))}
             
