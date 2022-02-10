@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Drawer = ({onClose, products = [] }) => {
+const Drawer = ({onClose, products = [], deleting }) => {
   return <div>
       <div className="drawer">
          <h2>corsina</h2>
@@ -18,7 +18,7 @@ const Drawer = ({onClose, products = [] }) => {
           <p>{obj.title}</p>
           <b>{obj.price}</b>
         </div>     
-        <button>0</button>
+        <button onClick={deleting}>0</button>
     </div>
         ))}
         
